@@ -1,5 +1,9 @@
 enum CPath {
   HOME = "/",
+  ABOUT = "/about",
+  CATEGORY = "/category",
+  CATEGORY_SLUG = "/category/:slug",
+  CONTACT = "/contact",
   SIGNIN = "/signin",
   PROFILE = "/my-profile",
   NOTFOUND = "*",
