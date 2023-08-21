@@ -9,7 +9,7 @@ function MainLayout({ children }: IProps) {
   return (
     <>
       <Navbar />
-      <div>{children}</div>
+      <div className="mt-[var(--navbar-height)]">{children}</div>
       <Footer />
     </>
   );

@@ -4,6 +4,7 @@ import logo from "~/assets/icons/logo.svg";
 import CPath from "~/constants/path";
 import Wrapper from "../Wrapper";
 import NavbarItem from "./navbar_item";
+import Avatar from "../Avatar";
 
 function Navbar() {
   return (
@@ -26,6 +27,10 @@ function Navbar() {
           </Link>
 
           <NavbarItem />
+
+          <div className="flex items-center gap-2">
+            <Avatar className="w-8 h-8" />
+          </div>
         </div>
       </Wrapper>
     </div>

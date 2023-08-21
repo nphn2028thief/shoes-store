@@ -13,7 +13,7 @@ export default {
         ccc: "#ccc",
       },
       borderWidth: {
-        "b-1": "border-bottom-width: 1px",
+        "1": "1px",
       },
       transitionProperty: {
         width: "width",

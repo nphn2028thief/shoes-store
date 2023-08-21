@@ -5,6 +5,8 @@ import IRoute from "../types/route";
 import CPath from "./path";
 
 const HomePage = lazy(() => import("../pages/home_page"));
+const AboutPage = lazy(() => import("../pages/about_page"));
+const ContactPage = lazy(() => import("../pages/contact_page"));
 const AuthPage = lazy(() => import("../pages/auth_page"));
 const ProfilePage = lazy(() => import("../pages/profile_page"));
 const NotFoundPage = lazy(() => import("../pages/not_found_page"));
@@ -21,6 +23,24 @@ const CRoute: IRoute[] = [
   },
   {
     id: 2,
+    name: "About",
+    path: CPath.ABOUT,
+    page: AboutPage,
+    layout: MainLayout,
+    // isPrivate: false,
+    // isRestricted: false,
+  },
+  {
+    id: 3,
+    name: "Contact",
+    path: CPath.CONTACT,
+    page: ContactPage,
+    layout: MainLayout,
+    // isPrivate: false,
+    // isRestricted: false,
+  },
+  {
+    id: 4,
     name: "Sign In",
     path: CPath.SIGNIN,
     page: AuthPage,
@@ -29,7 +49,7 @@ const CRoute: IRoute[] = [
     // isRestricted: true,
   },
   {
-    id: 3,
+    id: 5,
     name: "Profile",
     path: CPath.PROFILE,
     page: ProfilePage,
@@ -38,7 +58,7 @@ const CRoute: IRoute[] = [
     // isRestricted: false,
   },
   {
-    id: 4,
+    id: 6,
     name: "Not Found",
     path: CPath.NOTFOUND,
     page: NotFoundPage,
