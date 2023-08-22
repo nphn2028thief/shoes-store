@@ -1,9 +1,7 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
-import { ReactNode } from "react";
-import { NavLink } from "react-router-dom";
+import { ReactNode, forwardRef } from "react";
 
 interface IProps {
-  to: string;
   isActiveSibling?: boolean;
   activeClassName: string;
   className?: string;
@@ -11,9 +9,11 @@ interface IProps {
   children: ReactNode;
 }
 
-function NavLinkCustom(props: IProps) {
+const NavLinkCustom = forwardRef<HTMLButtonElement, IProps>(function (
+  props,
+  ref
+) {
   const {
-    to,
     isActiveSibling = false,
     activeClassName,
     className,
@@ -21,19 +21,17 @@ function NavLinkCustom(props: IProps) {
     children,
   } = props;
 
-  //   const isActive =
-
   return (
-    <NavLink
-      to={to}
-      className={({ isActive }) =>
-        isActive ? `${activeClassName} ${className}` : `${className}`
+    <button
+      ref={ref}
+      className={
+        isActiveSibling ? `${activeClassName} ${className}` : `${className}`
       }
       onClick={onClick}
     >
       {children}
-    </NavLink>
+    </button>
   );
-}
+});
 
 export default NavLinkCustom;

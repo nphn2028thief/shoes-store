@@ -21,6 +21,12 @@ export default {
       transitionTimingFunction: {
         ease: "ease",
       },
+      boxShadow: {
+        headless: "0 -4px 32px rgba(0, 0, 0, 0.2)",
+      },
+      borderColor: {
+        tippy: "rgba(0, 0, 0, 0.05)",
+      },
     },
   },
   plugins: [],
