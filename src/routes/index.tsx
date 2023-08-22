@@ -1,7 +1,7 @@
 import _ from "lodash";
 import { Fragment, Suspense } from "react";
 import { Navigate, Route, Routes as Router } from "react-router-dom";
-import Loading from "../components/loading";
+import SuspenseLoading from "~/components/suspense_loading";
 import CPath from "../constants/path";
 import CRoute from "../constants/route";
 import { useAppSelector } from "../store";
@@ -33,7 +33,7 @@ function Routes() {
             path={route.path}
             element={
               <Layout>
-                <Suspense fallback={<Loading />}>
+                <Suspense fallback={<SuspenseLoading />}>
                   <Page />
                 </Suspense>
               </Layout>

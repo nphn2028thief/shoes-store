@@ -6,6 +6,7 @@ enum CPath {
   CONTACT = "/contact",
   SIGNIN = "/signin",
   PROFILE = "/my-profile",
+  TEST = "/test",
   NOTFOUND = "*",
 }
 

@@ -2,11 +2,18 @@ import { BiMenuAltLeft } from "react-icons/bi";
 import { Link } from "react-router-dom";
 import logo from "~/assets/icons/logo.svg";
 import CPath from "~/constants/path";
-import Wrapper from "../Wrapper";
+import { ICategory } from "~/types/category";
+import Avatar from "../avatar";
+import Wrapper from "../wrapper";
 import NavbarItem from "./navbar_item";
-import Avatar from "../Avatar";
 
-function Navbar() {
+interface IProps {
+  categories: ICategory[];
+}
+
+function Navbar(props: IProps) {
+  const { categories } = props;
+
   return (
     <div className="h-navbar fixed left-0 top-0 right-0 border-b-1 border-solid border-ccc bg-white z-[999]">
       <Wrapper>
@@ -26,7 +33,7 @@ function Navbar() {
             </div>
           </Link>
 
-          <NavbarItem />
+          <NavbarItem categories={categories} />
 
           <div className="flex items-center gap-2">
             <Avatar className="w-8 h-8" />
