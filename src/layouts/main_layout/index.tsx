@@ -1,15 +1,20 @@
 import { useQuery } from "@tanstack/react-query";
-import axios from "axios";
+
+import axiosClient from "~/api/axios_client";
 import Loading from "~/components/loading";
+import Navbar from "~/components/navbar";
+import Footer from "~/components/footer";
+import { useAppDispatch } from "~/store";
+import { setCategories } from "~/store/category/cagetory_slice";
 import { ICategory } from "~/types/category";
-import Footer from "../../components/footer";
-import Navbar from "../../components/navbar";
 
 interface IProps {
   children: JSX.Element;
 }
 
 function MainLayout({ children }: IProps) {
+  const dispatch = useAppDispatch();
+
   const {
     isLoading,
     isError,
@@ -17,12 +22,14 @@ function MainLayout({ children }: IProps) {
     data: categories,
   } = useQuery<ICategory[], Error>({
     queryKey: ["category"],
-    queryFn: async ({ queryKey }) => {
-      const res = await axios.get(`http://localhost:5000/api/${queryKey[0]}`);
+    queryFn: async () => {
+      const res = await axiosClient.get("category");
+      dispatch(setCategories(res.data));
       return res.data;
     },
-    keepPreviousData: true,
-    refetchOnWindowFocus: false
+    retry: 1,
+    refetchOnMount: false,
+    refetchOnWindowFocus: false,
   });
 
   if (isLoading) {

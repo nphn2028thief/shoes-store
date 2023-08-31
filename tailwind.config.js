@@ -12,6 +12,9 @@ export default {
       colors: {
         ccc: "#ccc",
       },
+      backgroundColor: {
+        ccc: "#ccc",
+      },
       borderWidth: {
         "1": "1px",
       },

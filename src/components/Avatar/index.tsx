@@ -1,4 +1,5 @@
 import { LazyLoadImage } from "react-lazy-load-image-component";
+
 import fallback from "~/assets/images/fallback.jpg";
 import { useAppSelector } from "~/store";
 
