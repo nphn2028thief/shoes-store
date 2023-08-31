@@ -41,11 +41,11 @@ function MainLayout({ children }: IProps) {
   }
 
   return (
-    <>
+    <div>
       <Navbar categories={categories} />
-      <div className="mt-[var(--navbar-height)]">{children}</div>
+      <div className="h-[calc(100vh_-_var(--navbar-height))] mt-[var(--navbar-height)]">{children}</div>
       <Footer />
-    </>
+    </div>
   );
 }
 

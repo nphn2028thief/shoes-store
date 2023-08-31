@@ -2,7 +2,7 @@ import _ from "lodash";
 import { Fragment, Suspense } from "react";
 import { Navigate, Route, Routes as Router } from "react-router-dom";
 import SuspenseLoading from "~/components/suspense_loading";
-import CPath from "../constants/path";
+import EPath from "../constants/path";
 import CRoute from "../constants/route";
 import { useAppSelector } from "../store";
 
@@ -13,13 +13,13 @@ function Routes() {
     <Router>
       {_.isEmpty(user) ? (
         <Route
-          path={CPath.PROFILE}
-          element={<Navigate to={CPath.SIGNIN} replace />}
+          path={EPath.PROFILE}
+          element={<Navigate to={EPath.SIGNIN} replace />}
         />
       ) : (
         <>
-          {/* <Route path={CPath.HOME} element={<Navigate to={CPath.HOME} />} /> */}
-          <Route path={CPath.SIGNIN} element={<Navigate to={CPath.HOME} />} />
+          {/* <Route path={EPath.HOME} element={<Navigate to={EPath.HOME} />} /> */}
+          <Route path={EPath.SIGNIN} element={<Navigate to={EPath.HOME} />} />
         </>
       )}
 

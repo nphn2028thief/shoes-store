@@ -2,7 +2,7 @@ import { lazy } from "react";
 import AuthLayout from "../layouts/auth_layout";
 import MainLayout from "../layouts/main_layout";
 import IRoute from "../types/route";
-import CPath from "./path";
+import EPath from "./path";
 
 const HomePage = lazy(() => import("../pages/home_page"));
 const AboutPage = lazy(() => import("../pages/about_page"));
@@ -17,7 +17,7 @@ const CRoute: IRoute[] = [
   {
     id: 1,
     name: "Home",
-    path: CPath.HOME,
+    path: EPath.HOME,
     page: HomePage,
     layout: MainLayout,
     // isPrivate: false,
@@ -26,7 +26,7 @@ const CRoute: IRoute[] = [
   {
     id: 2,
     name: "About",
-    path: CPath.ABOUT,
+    path: EPath.ABOUT,
     page: AboutPage,
     layout: MainLayout,
     // isPrivate: false,
@@ -35,7 +35,7 @@ const CRoute: IRoute[] = [
   {
     id: 3,
     name: "Category",
-    path: CPath.CATEGORY_SLUG,
+    path: EPath.CATEGORY_SLUG,
     page: CategoryPage,
     layout: MainLayout,
     // isPrivate: false,
@@ -44,7 +44,7 @@ const CRoute: IRoute[] = [
   {
     id: 4,
     name: "Contact",
-    path: CPath.CONTACT,
+    path: EPath.CONTACT,
     page: ContactPage,
     layout: MainLayout,
     // isPrivate: false,
@@ -53,7 +53,7 @@ const CRoute: IRoute[] = [
   {
     id: 5,
     name: "Sign In",
-    path: CPath.SIGNIN,
+    path: EPath.SIGNIN,
     page: AuthPage,
     layout: AuthLayout,
     // isPrivate: false,
@@ -62,7 +62,7 @@ const CRoute: IRoute[] = [
   {
     id: 6,
     name: "Profile",
-    path: CPath.PROFILE,
+    path: EPath.PROFILE,
     page: ProfilePage,
     layout: MainLayout,
     // isPrivate: true,
@@ -71,7 +71,7 @@ const CRoute: IRoute[] = [
   {
     id: 99,
     name: "Test",
-    path: CPath.TEST,
+    path: EPath.TEST,
     page: TestPage,
     // isPrivate: false,
     // isRestricted: false,
@@ -79,7 +79,7 @@ const CRoute: IRoute[] = [
   {
     id: 7,
     name: "Not Found",
-    path: CPath.NOTFOUND,
+    path: EPath.NOTFOUND,
     page: NotFoundPage,
     // isPrivate: false,
     // isRestricted: false,

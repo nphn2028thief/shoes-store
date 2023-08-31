@@ -7,7 +7,7 @@ import Avatar from "../avatar";
 import Wrapper from "../wrapper";
 import NavbarItem from "./navbar_item";
 import NavbarMobile from "./navbar_mobile";
-import CPath from "~/constants/path";
+import EPath from "~/constants/path";
 import { useAppDispatch, useAppSelector } from "~/store";
 import { setShowNavbarMobile } from "~/store/app/app_slice";
 import { ICategory } from "~/types/category";
@@ -46,7 +46,7 @@ function Navbar(props: IProps) {
             <BiMenuAltLeft size={24} />
           </div>
 
-          <Link to={CPath.HOME}>
+          <Link to={EPath.HOME}>
             <div className="hidden md:inline-flex p-4 -ml-4">
               <img
                 src={logo}

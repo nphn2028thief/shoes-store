@@ -1,5 +1,7 @@
+import DevelopmentFeature from "~/components/development_feature";
+
 function AboutPage() {
-  return <div>AboutPage</div>;
+  return <DevelopmentFeature />;
 }
 
 export default AboutPage;
