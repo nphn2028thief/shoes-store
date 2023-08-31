@@ -4,6 +4,7 @@ import axiosClient from "~/api/axios_client";
 import Loading from "~/components/loading";
 import Navbar from "~/components/navbar";
 import Footer from "~/components/footer";
+import ErrorBoundary from "~/components/error_boundaries";
 import { useAppDispatch } from "~/store";
 import { setCategories } from "~/store/category/cagetory_slice";
 import { ICategory } from "~/types/category";
@@ -41,11 +42,11 @@ function MainLayout({ children }: IProps) {
   }
 
   return (
-    <div>
+    <ErrorBoundary>
       <Navbar categories={categories} />
       <div className="h-[calc(100vh_-_var(--navbar-height))] mt-[var(--navbar-height)]">{children}</div>
       <Footer />
-    </div>
+    </ErrorBoundary>
   );
 }
 
