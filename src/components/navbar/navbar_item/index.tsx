@@ -6,7 +6,7 @@ import slugify from "slugify";
 import NavLinkCustom from "~/components/navlink_custom";
 import PopperWrapper from "~/components/popper_wrapper";
 import CMenu from "~/constants/menu";
-import CPath from "~/constants/path";
+import EPath from "~/constants/path";
 import { ICategory } from "~/types/category";
 import { handleIconSibling } from "~/utils/function";
 
@@ -21,7 +21,7 @@ function NavbarItem(props: IProps) {
 
   const { pathname } = useLocation();
 
-  const isActive = pathname.includes(CPath.CATEGORY.split("/")[1]);
+  const isActive = pathname.includes(EPath.CATEGORY.split("/")[1]);
 
   return (
     <div className="hidden md:flex items-center gap-1 text-black font-semibold">

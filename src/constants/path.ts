@@ -1,4 +1,4 @@
-enum CPath {
+enum EPath {
   HOME = "/",
   ABOUT = "/about",
   CATEGORY = "/category",
@@ -10,4 +10,4 @@ enum CPath {
   NOTFOUND = "*",
 }
 
-export default CPath;
+export default EPath;

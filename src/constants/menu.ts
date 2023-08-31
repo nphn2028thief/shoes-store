@@ -3,21 +3,21 @@ import { TbCategory2 } from "react-icons/tb";
 import { BsInfoCircle } from "react-icons/bs";
 import { MdOutlineContactless } from "react-icons/md";
 
-import CPath from "./path";
+import EPath from "./path";
 import IMenu from "~/types/menu";
 
 const CMenu: IMenu[] = [
   {
     id: 1,
     name: "Home",
-    path: CPath.HOME,
+    path: EPath.HOME,
     icon: TbHome,
     hasSibling: false,
   },
   {
     id: 2,
     name: "About",
-    path: CPath.ABOUT,
+    path: EPath.ABOUT,
     icon: BsInfoCircle,
     hasSibling: false,
   },
@@ -31,7 +31,7 @@ const CMenu: IMenu[] = [
   {
     id: 4,
     name: "Contact",
-    path: CPath.CONTACT,
+    path: EPath.CONTACT,
     icon: MdOutlineContactless,
     hasSibling: false,
   },

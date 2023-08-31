@@ -1,5 +1,7 @@
+import DevelopmentFeature from "~/components/development_feature";
+
 function ContactPage() {
-  return <div>ContactPage</div>;
+  return <DevelopmentFeature />;
 }
 
 export default ContactPage;

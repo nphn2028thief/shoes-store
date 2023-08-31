@@ -6,7 +6,7 @@ import slugify from "slugify";
 
 import NavLinkCustom from "~/components/navlink_custom";
 import CMenu from "~/constants/menu";
-import CPath from "~/constants/path";
+import EPath from "~/constants/path";
 import { useAppDispatch, useAppSelector } from "~/store";
 import { handleIconSibling, handleShowNavbarMobile } from "~/utils/function";
 
@@ -19,7 +19,7 @@ function NavbarMobile() {
   const { categories } = useAppSelector((state) => state.categorySlice);
   const dispatch = useAppDispatch();
 
-  const isActive = pathname.includes(CPath.CATEGORY.split("/")[1]);
+  const isActive = pathname.includes(EPath.CATEGORY.split("/")[1]);
 
   return (
     <AnimatePresence>
