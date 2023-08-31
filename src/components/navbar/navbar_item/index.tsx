@@ -1,7 +1,8 @@
-import Tippy from "@tippyjs/react/headless";
 import { useState } from "react";
 import { NavLink, useLocation } from "react-router-dom";
+import Tippy from "@tippyjs/react/headless";
 import slugify from "slugify";
+
 import NavLinkCustom from "~/components/navlink_custom";
 import PopperWrapper from "~/components/popper_wrapper";
 import CMenu from "~/constants/menu";
@@ -44,7 +45,7 @@ function NavbarItem(props: IProps) {
                           )}`}
                           style={{ transition: "background-color 0.3s ease" }}
                           className={({ isActive }) =>
-                            `flex justify-between items-center px-4 py-2 ${
+                            `flex justify-between items-center px-4 py-2 text-sm ${
                               isActive && `bg-gray-200/80`
                             } hover:bg-gray-200/80`
                           }
@@ -65,7 +66,7 @@ function NavbarItem(props: IProps) {
                   className="w-full flex items-center gap-2 p-3 relative after:w-0 after:h-0.5 hover:after:w-full after:absolute after:bottom-2 after:left-1/2 after:-translate-x-1/2 after:transition-width after:duration-500 after:ease-ease after:bg-black"
                   onClick={() => setShowSiblingMenu(!showSiblingMenu)}
                 >
-                  <span>{menu.name}</span>
+                  <span className="text-sm">{menu.name}</span>
                   {menu.hasSibling && <Icon fontWeight={600} />}
                 </NavLinkCustom>
               </Tippy>
@@ -81,7 +82,7 @@ function NavbarItem(props: IProps) {
                   isActive && "after:w-full"
                 } after:absolute after:bottom-2 after:left-1/2 after:-translate-x-1/2 after:transition-width after:duration-500 after:ease-ease after:bg-black`}
               >
-                <span>{menu.name}</span>
+                <span className="text-sm">{menu.name}</span>
               </div>
             )}
           </NavLink>
